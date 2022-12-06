@@ -1,0 +1,141 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\DraftStockSymbol.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\DraftStockSymbol\DraftStockSymbol.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\DraftStockSymbol\DraftStockSymbolCustomer - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\LauncherStockSymbol.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\LauncherStockSymbol\LauncherStockSymbol - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\LimitationsStockSymbol\LimitationsTimeAdvertisingStockSymbol - Copy (2).feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\LimitationsStockSymbol\LimitationsTimeAdvertisingStockSymbol - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\LimitationsStockSymbol\LimitationsTimeStockSymbol - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\LimitationsStockSymbol\LimitationsTransactionTypeStockSymbol - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\BuyStockSymbol\BuyStockSymbol.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\SellStockSymbol.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\SellStockSymbol\SellStockSymbol - Copy.feature.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetSeleniumExtras.PageObjects" Version="3.11.0" />
+    <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+    <PackageReference Include="RestSharp" Version="106.15.0" />
+    <PackageReference Include="Selenium.Support" Version="4.6.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.6.0" />
+    <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.57" />
+    <PackageReference Include="SpecFlow.NUnit" Version="3.9.22" />
+    <PackageReference Include="nunit" Version="3.13.2" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.1.0" />
+    <PackageReference Include="FluentAssertions" Version="6.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Features\DraftStockSymbol\DraftStockSymbolTerader.feature.cs">
+      <DependentUpon>DraftStockSymbolTerader.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\DraftStockSymbol\DraftStockSymbolCustomer.feature.cs">
+      <DependentUpon>DraftStockSymbolCustomer.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\LauncherStockSymbol\LauncherStockSymbolTerader.feature.cs">
+      <DependentUpon>LauncherStockSymbolTerader.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\LimitationsStockSymbol\LimitationsTransactionManagerStockSymbol.feature.cs">
+      <DependentUpon>LimitationsTransactionManagerStockSymbol.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\LimitationsStockSymbol\LimitationsTransactionalActionStockSymbol.feature.cs">
+      <DependentUpon>LimitationsTransactionalActionStockSymbol.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\LimitationsStockSymbol\LimitationsTimeValidityTypeStockSymbol.feature.cs">
+      <DependentUpon>LimitationsTimeValidityTypeStockSymbol.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\LimitationsStockSymbol\LimitationsOrderValuelimitStockSymbol.feature.cs">
+      <DependentUpon>LimitationsOrderValuelimitStockSymbol.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\LimitationsStockSymbol\LimitationsTransactionTypeStockSymbol.feature.cs">
+      <DependentUpon>LimitationsTransactionTypeStockSymbol.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\LimitationsStockSymbol\LimitationsMarketTypeStockSymbol.feature.cs">
+      <DependentUpon>LimitationsMarketTypeStockSymbol.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\LimitationsStockSymbol\LimitationsNumberStockSymbol.feature.cs">
+      <DependentUpon>LimitationsNumberStockSymbol.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\LimitationsStockSymbol\LimitationsTimeStockSymbol.feature.cs">
+      <DependentUpon>LimitationsTimeStockSymbol.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\LimitationsStockSymbol\LimitationsDateStockSymbol.feature.cs">
+      <DependentUpon>LimitationsDateStockSymbol.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\BuyStockSymbol\BuyStockSymbolTerader.feature.cs">
+      <DependentUpon>BuyStockSymbolTerader.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\SellStockSymbol\SellStockSymbolTerader.feature.cs">
+      <DependentUpon>SellStockSymbolTerader.feature</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowFeatureFiles Update="Features\DraftStockSymbol\DraftStockSymbolTerader.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\DraftStockSymbol\DraftStockSymbolCustomer.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\LauncherStockSymbol\LauncherStockSymbolTerader.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\LimitationsStockSymbol\LimitationsTransactionManagerStockSymbol.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\LimitationsStockSymbol\LimitationsTransactionalActionStockSymbol.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\LimitationsStockSymbol\LimitationsTimeValidityTypeStockSymbol.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\LimitationsStockSymbol\LimitationsOrderValuelimitStockSymbol.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\LimitationsStockSymbol\LimitationsTransactionTypeStockSymbol.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\LimitationsStockSymbol\LimitationsMarketTypeStockSymbol.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\LimitationsStockSymbol\LimitationsNumberStockSymbol.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\LimitationsStockSymbol\LimitationsTimeStockSymbol.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\LimitationsStockSymbol\LimitationsDateStockSymbol.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\BuyStockSymbol\BuyStockSymbolTerader.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\SellStockSymbol\SellStockSymbolTerader.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+  </ItemGroup>
+
+</Project>
